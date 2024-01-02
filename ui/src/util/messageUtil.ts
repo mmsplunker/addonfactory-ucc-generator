@@ -2,11 +2,6 @@ import * as __ from 'lodash';
 import { _ } from '@splunk/ui-utils/i18n';
 import messageDict from '../constants/messageDict';
 
-/**
- * @param {number} code  a int value.
- * @param {(string|number)[]=} msg arguments to format the message.
- * @returns {string}
- */
 export const getFormattedMessage = (code: number, msg?: (string | number)[] /* , ... , args */) => {
     let template = messageDict[code] || messageDict.unknown;
     template = _(template);
